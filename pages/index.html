@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container my-5 mx-auto w-75">
+            <div class="form-group">
+                <label class="my-2" for="pName">Product Name:</label>
+                <input class="form-control" type="text" id="pName">
+            </div>
+            <div class="form-group">
+                <label class="my-2" for="pPrice">Product Price:</label>
+                <input class="form-control" type="number" id="pPrice">
+            </div>
+            <div class="form-group">
+                <label class="my-2" for="pCategory">Product Category:</label>
+                <input class="form-control" type="text" id="pCategory">
+            </div>
+            <div class="form-group">
+                <label class="my-2" for="pDescription">Product Description:</label>
+                <textarea class="form-control" id="pDescription" rows="3"></textarea>
+            </div>
+            <button id="main-btn" onclick="addProduct()" class="btn btn-outline-info my-3">Add Product</button>
+        </div>
+
+        <div class="w-75 mx-auto mb-5">
+            <label class="mb-2" for="search">Search:</label>
+            <input onkeyup="searchProduct(this.value)" class="form-control" type="text" id="search">
+        </div>
+
+        <table class="table text-center w-75 py-3 m-auto">
+            <thead>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+
+        <script src="../js/script.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
